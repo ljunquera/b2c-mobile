@@ -11,6 +11,7 @@
 		EEB8C7D129EB5C510083DF85 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB8C7D029EB5C510083DF85 /* ContentView.swift */; };
 		EEB8C7D329EB5C530083DF85 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EEB8C7D229EB5C530083DF85 /* Assets.xcassets */; };
 		EEB8C7D629EB5C530083DF85 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EEB8C7D529EB5C530083DF85 /* Preview Assets.xcassets */; };
+		EEB8C7DE29EB694D0083DF85 /* MSAL in Frameworks */ = {isa = PBXBuildFile; productRef = EEB8C7DD29EB694D0083DF85 /* MSAL */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EEB8C7DE29EB694D0083DF85 /* MSAL in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +85,9 @@
 			dependencies = (
 			);
 			name = "b2c-mobile";
+			packageProductDependencies = (
+				EEB8C7DD29EB694D0083DF85 /* MSAL */,
+			);
 			productName = "b2c-mobile";
 			productReference = EEB8C7CB29EB5C510083DF85 /* b2c-mobile.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +116,9 @@
 				Base,
 			);
 			mainGroup = EEB8C7C229EB5C510083DF85;
+			packageReferences = (
+				EEB8C7DC29EB694D0083DF85 /* XCRemoteSwiftPackageReference "microsoft-authentication-library-for-objc" */,
+			);
 			productRefGroup = EEB8C7CC29EB5C510083DF85 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -337,6 +345,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		EEB8C7DC29EB694D0083DF85 /* XCRemoteSwiftPackageReference "microsoft-authentication-library-for-objc" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AzureAD/microsoft-authentication-library-for-objc";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		EEB8C7DD29EB694D0083DF85 /* MSAL */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EEB8C7DC29EB694D0083DF85 /* XCRemoteSwiftPackageReference "microsoft-authentication-library-for-objc" */;
+			productName = MSAL;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = EEB8C7C329EB5C510083DF85 /* Project object */;
 }
